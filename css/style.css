@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Define um estilo padrão para todos os elementos HTML */
+
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Faz com que a largura e altura incluam o preenchimento e a borda, não apenas o conteúdo */
+    text-decoration: none; /* Remove decorações de texto, como sublinhado em links */
+    border: none; /* Remove todas as bordas */
+    outline: none; /* Remove a borda de foco ao clicar em um elemento */
+    scroll-behavior: smooth; /* Adiciona um efeito de rolagem suave (animação) */
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão como 'Poppins' (se disponível) e, se não, qualquer fonte sans-serif */
+}
+
+:root {
+    --bg-color: #081b29; /* Define uma variável chamada '--bg-color' com o valor #081b29 (um tom escuro de azul) */
+    --second-bg-color: #112e42; /* Define uma variável chamada '--second-bg-color' com o valor #112e42 (um tom mais escuro de azul) */
+    --text-color: #ededed; /* Define uma variável chamada '--text-color' com o valor #ededed (um tom claro de cinza) */
+    --main-color: #00abf0; /* Define uma variável chamada '--main-color' com o valor #00abf0 (um tom de azul mais brilhante) */
+    --bg--about: #F7F7F7; /* Define uma variável chamada '--bg--about' com o valor #F7F7F7 (um tom claro de cinza) */
+    --text-about: #112e42; /* Define uma variável chamada '--text-about' com o valor #112e42 (um tom escuro de azul) */
+}
+
+
+html {
+    font-size: 62.5%; /* Define o tamanho da fonte para 62.5% do tamanho padrão. Isso é frequentemente usado para facilitar a conversão de tamanhos de fonte em unidades 'em'. */
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal se o conteúdo da página for maior que a largura da tela. */
+}
+
+
+body {
+    background: var(--bg-color); /* Define o fundo do corpo da página usando a variável '--bg-color' que foi definida anteriormente no bloco :root. Isso significa que o fundo será o tom de azul escuro #081b29. */
+    color: var(--text-color); /* Define a cor do texto do corpo da página usando a variável '--text-color' que foi definida anteriormente no bloco :root. Isso significa que o texto será a cor cinza claro #ededed. */
+}
+
+
+.header {
+    position: fixed; /* Define a posição do elemento como fixa, o que significa que ele permanecerá na mesma posição mesmo quando a página é rolada. */
+    top: 0; /* Coloca o elemento no topo da janela do navegador. */
+    left: 0; /* Coloca o elemento no canto esquerdo da janela do navegador. */
+    width: 100%; /* Define a largura do elemento como 100% da largura da janela do navegador. */
+    padding: 2rem 9%; /* Define o preenchimento interno do elemento, com 2 unidades de altura de linha no topo e na base, e 9% da largura da janela nos lados esquerdo e direito. */
+    background: transparent; /* Define o fundo do elemento como transparente, o que significa que ele não terá cor de fundo visível. */
+    display: flex; /* Define o elemento como um contêiner flexível, permitindo a manipulação de seus elementos filhos. */
+    justify-content: space-between; /* Alinha os elementos filhos horizontalmente com espaço entre eles. */
+    align-items: center; /* Alinha os elementos filhos verticalmente ao centro. */
+    z-index: 100; /* Define a ordem de empilhamento do elemento, tornando-o visível acima de outros elementos que não tenham uma z-index definida. */
+}
+
+
+.logo {
+    font-size: 2.5rem; /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão. */
+    color: var(--text-color); /* Define a cor do texto usando a variável '--text-color' que foi definida anteriormente no bloco :root. Isso significa que o texto será na cor cinza claro #ededed. */
+    font-weight: 600; /* Define o peso da fonte como 600, que é geralmente uma fonte semi-negrito. */
+}
+
+
+.navbar a {
+    font-size: 1.7rem; /* Define o tamanho da fonte como 1.7 vezes o tamanho padrão. */
+    color: var(--text-color); /* Define a cor do texto usando a variável '--text-color' que foi definida anteriormente no bloco :root. Isso significa que o texto será na cor cinza claro #ededed. */
+    font-weight: 500; /* Define o peso da fonte como 500, que é um peso médio. */
+    margin-left: 3.5rem; /* Adiciona uma margem à esquerda de 3.5 unidades de largura de linha. */
+    transition: .3s; /* Adiciona uma transição de 0.3 segundos para animar mudanças de estilo. */
+}
+
+
+.navbar a:hover, .navbar a.active {
+    color: var(--main-color); /* Define a cor do texto como a variável '--main-color' que foi definida anteriormente no bloco :root. Isso significa que a cor será o tom de azul mais brilhante #00abf0. */
+}
+
+
+
+
+#menu-icon {
+    font-size: 3.6rem; /* Define o tamanho da fonte como 3.6 vezes o tamanho padrão. */
+    color: var(--text-color); /* Define a cor do texto usando a variável '--text-color' que foi definida anteriormente no bloco :root. Isso significa que o ícone será na cor cinza claro #ededed. */
+    cursor: pointer; /* Define o cursor do mouse como um ponteiro, indicando que o elemento é clicável. */
+    display: none; /* Inicialmente, o elemento não será exibido. */
+}
+
+
+section {
+    min-height: 100vh; /* Define a altura mínima da seção como 100% da altura da viewport (tela do navegador), garantindo que a seção tenha pelo menos a altura da tela, mesmo que seu conteúdo seja menor. */
+    padding: 10rem 9% 2rem; /* Define o preenchimento interno da seção com 10 unidades de altura de linha no topo, 2 unidades de altura de linha na parte inferior e 9% da largura da janela nos lados esquerdo e direito. */
+}
+
+
+.home {
+    display: flex; /* Define o elemento como um contêiner flexível, permitindo a manipulação de seus elementos filhos. */
+    align-items: center; /* Alinha os elementos filhos verticalmente ao centro. */
+    padding: 0 9%; /* Define o preenchimento interno do elemento, com nenhum preenchimento na parte superior e inferior, e 9% da largura da janela nos lados esquerdo e direito. */
+    background: url(/images/teste12.png) no-repeat; /* Define uma imagem de fundo usando o caminho '/images/teste12.png' e especifica que ela não será repetida. */
+    background-size: cover; /* Faz com que a imagem de fundo cubra completamente o elemento. */
+    background-position: center; /* Define a posição da imagem de fundo como o centro do elemento. */
+}
+
+
+.home-content {
+    max-width: 60rem; /* Define a largura máxima do elemento como 60 unidades de largura de linha. */
+}
+
+
+.home-content h1 {
+    font-size: 5.6rem; /* Define o tamanho da fonte como 5.6 vezes o tamanho padrão. */
+    font-weight: 700; /* Define o peso da fonte como 700, que é geralmente uma fonte negrito. */
+    line-height: 1.3; /* Define a altura da linha como 1.3 vezes o tamanho da fonte, criando um espaçamento apropriado entre as linhas de texto. */
+}
+
+
+.home-content .text-animate {
+    position: relative; /* Define a posição do elemento como relativa em relação ao seu elemento pai. */
+    width: 32.8rem; /* Define a largura do elemento como 32.8 unidades de largura de linha. */
+}
+
+
+.home-content .text-animate h3 {
+    font-size: 3.2rem; /* Define o tamanho da fonte como 3.2 vezes o tamanho padrão. */
+    font-weight: 700; /* Define o peso da fonte como 700, que é geralmente uma fonte negrito. */
+    color: transparent; /* Define a cor do texto como transparente. */
+    -webkit-text-stroke: .7px var(--main-color); /* Adiciona um contorno ao texto usando a cor definida pela variável '--main-color', com uma espessura de 0.7 pixels. Esta propriedade é específica para navegadores baseados em WebKit. */
+}
+
+
+.home-content p {
+    font-size: 1.6rem; /* Define o tamanho da fonte como 1.6 vezes o tamanho padrão. */
+    margin: 2rem 0 4rem; /* Define as margens superior e inferior como 2 unidades de altura de linha e a margem inferior como 4 unidades de altura de linha. */
+}
+
+.btn-box {
+    position: relative; /* Define a posição do elemento como relativa em relação ao seu elemento pai. */
+    display: flex; /* Define o elemento como um contêiner flexível, permitindo a manipulação de seus elementos filhos. */
+    justify-content: space-between; /* Distribui o espaço disponível entre os elementos filhos, criando um espaçamento uniforme entre eles. */
+    width: 34.5rem; /* Define a largura do elemento como 34.5 unidades de largura de linha. */
+    height: 5rem; /* Define a altura do elemento como 5 unidades de altura de linha. */
+}
+
+
+.btn-box .btn {
+    position: relative; /* Define a posição do elemento como relativa em relação ao seu elemento pai. */
+    display: inline-flex; /* Define o elemento como um contêiner flexível em linha. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
+    width: 15rem; /* Define a largura do elemento como 15 unidades de largura de linha. */
+    height: 100%; /* Define a altura do elemento como 100% da altura do elemento pai. */
+    background: var(--main-color); /* Define o plano de fundo usando uma variável CSS customizada. */
+    border: .2rem solid var(--main-color); /* Define uma borda de 0.2 unidades de largura e cor igual ao plano de fundo. */
+    border-radius: .8rem; /* Define o raio de borda para 0.8 unidades. */
+    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes o tamanho padrão. */
+    font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito). */
+    letter-spacing: .1rem; /* Define o espaçamento entre caracteres como 0.1 unidades de largura de linha. */
+    color: var(--bg-color); /* Define a cor do texto usando uma variável CSS customizada. */
+    z-index: 1; /* Define a posição na pilha de sobreposição de elementos. */
+    overflow: hidden; /* Define o comportamento de overflow do conteúdo. */
+    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+}
+
+ 
+
+.btn-box .btn:hover {
+    color: var(--main-color); /* Ao passar o mouse sobre o botão, altera a cor do texto para a cor principal. */
+}
+
+.btn-box .btn:nth-child(2) {
+    background: transparent; /* Para o segundo botão, define o plano de fundo como transparente. */
+    color: var(--main-color); /* Para o segundo botão, define a cor do texto como a cor principal. */
+}
+
+.btn-box .btn:nth-child(2):hover {
+    color: var(--bg-color); /* Ao passar o mouse sobre o segundo botão, altera a cor do texto para a cor de fundo. */
+}
+
+.btn-box .btn:nth-child(2)::before {
+    background: var(--main-color); /* Adiciona um elemento pseudo antes do segundo botão com o plano de fundo na cor principal. */
+}
+
+
+.btn-box .btn::before {
+    content: ''; /* Adiciona um conteúdo vazio antes do botão. */
+    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
+    top: 0; /* Alinha o topo do elemento ao topo do elemento pai. */
+    left: 0; /* Alinha a esquerda do elemento à esquerda do elemento pai. */
+    width: 0; /* Define a largura inicial como 0. */
+    height: 100%; /* Define a altura como 100% da altura do elemento pai. */
+    background: var(--bg-color); /* Define o plano de fundo usando uma variável CSS customizada. */
+    z-index: -1; /* Define a posição na pilha de sobreposição de elementos para estar atrás do botão. */
+    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+}
+
+.btn-box .btn:hover::before {
+    width: 100%; /* Ao passar o mouse sobre o botão, aumenta a largura do elemento antes do botão para 100%. */
+}
+
+.home-sci {
+    position:absolute; /* Define a posição como absoluta em relação ao elemento pai. */
+    bottom: 4rem; /* Define uma distância de 4 unidades a partir da borda inferior do elemento pai. */
+    width: 170px; /* Define a largura como 170 pixels. */
+    display: flex; /* Define o elemento como um contêiner flexível. */
+    justify-content: space-between; /* Distribui o espaço disponível entre os elementos filhos. */
+}
+
+
+.home-sci a {
+    position: relative; /* Define a posição como relativa em relação ao seu elemento pai. */
+    display: inline-flex; /* Define o elemento como um contêiner flexível em linha. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
+    width: 40px; /* Define a largura do elemento como 40 pixels. */
+    height: 40px; /* Define a altura do elemento como 40 pixels. */
+    background: transparent; /* Define o plano de fundo como transparente. */
+    border: .2rem solid var(--main-color); /* Define uma borda de 0.2 unidades de largura e cor igual à cor principal. */
+    border-radius: 50%; /* Define o raio de borda como 50%, criando um círculo. */
+    font-size: 20px; /* Define o tamanho da fonte como 20 pixels. */
+    color: var(--main-color); /* Define a cor do texto usando uma variável CSS customizada. */
+    z-index: 1; /* Define a posição na pilha de sobreposição de elementos. */
+    overflow: hidden; /* Define o comportamento de overflow do conteúdo. */
+    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+}
+
+.home-sci a:hover {
+    color: var(--bg-color); /* Ao passar o mouse sobre o link, altera a cor do texto para a cor de fundo. */
+}
+
+.home-sci a::before {
+    content: ''; /* Adiciona um conteúdo vazio antes do link. */
+    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
+    top: 0; /* Alinha o topo do elemento ao topo do elemento pai. */
+    left: 0; /* Alinha a esquerda do elemento à esquerda do elemento pai. */
+    width: 0%; /* Define a largura inicial como 0%. */
+    height: 100%; /* Define a altura como 100% da altura do elemento pai. */
+    background: var(--main-color); /* Define o plano de fundo usando uma variável CSS customizada. */
+    z-index: -1; /* Define a posição na pilha de sobreposição de elementos para estar atrás do link. */
+    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+}
+
+
+.home-sci a:hover::before { 
+    width: 100%; /* Ao passar o mouse sobre o link, expande a largura do elemento antes do link para 100%. */
+}
+
+.home-imgHover {
+    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
+    top: 0; /* Alinha o topo do elemento ao topo do elemento pai. */
+    right: 0; /* Alinha a direita do elemento à direita do elemento pai. */
+    width: 48%; /* Define a largura do elemento como 48% do elemento pai. */
+    height: 100%; /* Define a altura do elemento como 100% da altura do elemento pai. */
+    background: transparent; /* Define o plano de fundo como transparente. */
+    border: transparent; /* Define a borda como transparente. */
+    transition: 3s; /* Adiciona uma transição de 3 segundos para animações suaves. */
+}
+
+.home-imgHover:hover {
+    background: #081b29; /* Ao passar o mouse sobre o elemento, altera o plano de fundo para a cor #081b29. */
+    opacity: .8; /* Define a opacidade do elemento como 80%. */
+}
+
+.about {
+    display: flex; /* Define o elemento como um contêiner flexível. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
+    flex-direction: column; /* Define a direção do layout como coluna. */
+    gap: 2rem; /* Define o espaçamento entre os elementos como 2 unidades. */
+    background: var(--second-bg-color); /* Define o plano de fundo usando uma variável CSS customizada. */
+    padding-bottom: 6rem; /* Adiciona um preenchimento na parte inferior de 6 unidades. */
+}
+
+
+.heading {
+    font-size: 5rem; /* Define o tamanho da fonte como 5 vezes o tamanho padrão. */
+    margin-bottom: 3rem; /* Define as margens inferior e superior como 1 unidade, e a margem direita e esquerda como 0. */
+    text-align: center; /* Centraliza o texto horizontalmente. */
+}
+
+span {
+    color: var(--main-color); /* Define a cor do texto usando uma variável CSS customizada. */
+}
+
+.about-img {
+    position: relative; /* Define a posição como relativa em relação ao seu elemento pai. */
+    width: 25rem; /* Define a largura do elemento como 25 unidades de largura de linha. */
+    height: 25rem; /* Define a altura do elemento como 25 unidades de altura de linha. */
+    border-radius: 50%; /* Define o raio de borda como 50%, criando um círculo. */
+    display: flex; /* Define o elemento como um contêiner flexível. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
+}
+
+.about-img img {
+    width: 90%; /* Define a largura da imagem como 90% do elemento pai. */
+    border-radius: 50%; /* Define o raio de borda como 50%, criando um círculo. */
+    border: .3rem solid var(--main-color); /* Define uma borda de 0.3 unidades de largura e cor preta. */
+}
+
+
+.about-img .circle-spin {
+    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
+    top: 50%; /* Alinha o topo do elemento ao meio do elemento pai. */
+    left: 50%; /* Alinha a esquerda do elemento ao meio do elemento pai. */
+    transform: translate(-50%, -50%) rotate(0); /* Move o elemento de volta 50% de sua largura e altura, e não faz rotação. */
+    width: 100%; /* Define a largura do elemento como 100% do elemento pai. */
+    height: 100%; /* Define a altura do elemento como 100% do elemento pai. */
+    border-radius: 50%; /* Define o raio de borda como 50%, criando um círculo. */
+    border-top: .3rem solid var(--second-bg-color); /* Adiciona uma borda superior de 0.3 unidades com a cor de fundo específica. */
+    border-bottom: .3rem solid var(--second-bg-color); /* Adiciona uma borda inferior de 0.3 unidades com a cor de fundo específica. */
+    border-left: .3rem solid var(--main-color); 
+    border-right: .3rem solid var(--main-color); 
+}
+
+.about-content {
+    text-align: center; /* Centraliza o texto horizontalmente. */
+}
+
+.about-content h3 {
+    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes o tamanho padrão. */
+}
+
+.about-content h2 {
+    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes o tamanho padrão. */
+}
+
+.about-content p {
+    font-size: 1.5rem; /* Define o tamanho da fonte como 1.5 vezes o tamanho padrão. */
+    margin: 2rem 0rem 2rem; /* Define as margens superior, inferior e lateral como 2 unidades. */
+}
+
+
+.btn-box.btns {
+    display: inline-block; /* Define o elemento como um bloco em linha. */
+    width: 15rem; /* Define a largura do elemento como 15 unidades de largura de linha. */
+}
+
+.btn-box.btns a::before {
+    background: var(--second-bg-color); /* Define o plano de fundo usando uma variável CSS customizada. */
+}
+
+.education {
+    display: flex; /* Define o elemento como um contêiner flexível. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
+    flex-direction: column; /* Define a direção do layout como coluna. */
+    min-height: auto; /* Define a altura mínima como automática. */
+    padding-bottom: 5rem; /* Adiciona um preenchimento na parte inferior de 5 unidades. */
+}
+
+.education .education-row {
+    display: flex; /* Define o elemento como um contêiner flexível. */
+    flex-wrap: wrap; /* Permite que os elementos dentro do contêiner se envolvam em linhas. */
+    gap: 5rem; /* Define o espaçamento entre os elementos como 5 unidades. */
+}
+
+.education-row .education-column {
+    flex: 1 1 40rem; /* Define a flexibilidade do elemento com base no espaço disponível. */
+}
+
+.education-column .title {
+    font-size: 2.5rem; /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão. */
+    margin: 0 0 1.5rem 2rem; /* Define as margens inferior, superior e lateral como 0, 1.5 e 2 unidades respectivamente. */
+}
+
+.education-column .education-box {
+    border-left: .2rem solid var(--main-color); /* Adiciona uma borda esquerda de 0.2 unidades com a cor principal. */
+}
+
+.education-box .education-content {
+    position: relative;
+    padding: 2rem;
+
+}
+
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 59%;
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.education-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+
+    transition: .5s;
+}
+
+.education-content .content:hover::before{
+    width: 100%;
+}
+
+
+
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+
+}
+
+.education-content .content .year i {
+    padding-right: .5rem;
+}
+
+.education-content .content h3 {
+    font-size: 2rem;
+}
+
+.education-content .content p {
+    font-size: 1.1rem;
+    font-size: 1.1rem;
+
+}
+
+.skills {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--second-bg-color);
+
+}
+
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-row .skills-column{
+    flex: 1 1 40rem;
+
+}
+
+.skills-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+
+
+}
+
+.skills-box .skills-content {
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.skills-box .skills-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.skills-box .skills-content:hover::before{
+width: 100%;
+}
+
+
+.skills-content .progress {
+    padding: 1rem 0;
+
+}
+
+.skills-content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.skills-content .progress h3 span {
+    color: var(--text-color);
+
+}
+
+.skills-content .progress .bar {
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0 ;
+}
+
+.skills-content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+
+
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 70%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 30%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+    width: 20%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+    width: 30%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+    width: 70%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+    width: 60%;
+}
+
+/* 53:06 */
