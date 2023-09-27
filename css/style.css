@@ -1,59 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Define um estilo padrão para todos os elementos HTML */
+/* Resetando margens, preenchimentos e caixas de modelo */
 
 * {
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o preenchimento padrão */
-    box-sizing: border-box; /* Faz com que a largura e altura incluam o preenchimento e a borda, não apenas o conteúdo */
-    text-decoration: none; /* Remove decorações de texto, como sublinhado em links */
-    border: none; /* Remove todas as bordas */
-    outline: none; /* Remove a borda de foco ao clicar em um elemento */
-    scroll-behavior: smooth; /* Adiciona um efeito de rolagem suave (animação) */
-    font-family: 'Poppins', sans-serif; /* Define a fonte padrão como 'Poppins' (se disponível) e, se não, qualquer fonte sans-serif */
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    text-decoration: none; 
+    border: none; 
+    outline: none; 
+    scroll-behavior: smooth; 
+    font-family: 'Poppins', sans-serif; 
 }
 
+/* Definindo variáveis de cores */
 :root {
-    --bg-color: #081b29; /* Define uma variável chamada '--bg-color' com o valor #081b29 (um tom escuro de azul) */
-    --second-bg-color: #112e42; /* Define uma variável chamada '--second-bg-color' com o valor #112e42 (um tom mais escuro de azul) */
-    --text-color: #ededed; /* Define uma variável chamada '--text-color' com o valor #ededed (um tom claro de cinza) */
-    --main-color: #00abf0; /* Define uma variável chamada '--main-color' com o valor #00abf0 (um tom de azul mais brilhante) */
-    --bg--about: #F7F7F7; /* Define uma variável chamada '--bg--about' com o valor #F7F7F7 (um tom claro de cinza) */
-    --text-about: #112e42; /* Define uma variável chamada '--text-about' com o valor #112e42 (um tom escuro de azul) */
+    --bg-color: #081b29; 
+    --second-bg-color: #112e42; 
+    --text-color: #ededed; 
+    --main-color: #00abf0; 
+    --bg--about: #F7F7F7; 
+    --text-about: #112e42; 
 }
 
-
+/* Configurações gerais da página */
 html {
-    font-size: 62.5%; /* Define o tamanho da fonte para 62.5% do tamanho padrão. Isso é frequentemente usado para facilitar a conversão de tamanhos de fonte em unidades 'em'. */
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal se o conteúdo da página for maior que a largura da tela. */
+    font-size: 62.5%; 
+    overflow-x: hidden; 
 }
 
-
+/* Estilos para o corpo da página */
 body {
-    background: var(--bg-color); /* Define o fundo do corpo da página usando a variável '--bg-color' que foi definida anteriormente no bloco :root. Isso significa que o fundo será o tom de azul escuro #081b29. */
-    color: var(--text-color); /* Define a cor do texto do corpo da página usando a variável '--text-color' que foi definida anteriormente no bloco :root. Isso significa que o texto será a cor cinza claro #ededed. */
+    background: var(--bg-color); 
+    color: var(--text-color); 
 }
 
-
+/* Estilos para o cabeçalho (header) */
 .header {
-    position: fixed; /* Define a posição do elemento como fixa, o que significa que ele permanecerá na mesma posição mesmo quando a página é rolada. */
-    top: 0; /* Coloca o elemento no topo da janela do navegador. */
-    left: 0; /* Coloca o elemento no canto esquerdo da janela do navegador. */
-    width: 100%; /* Define a largura do elemento como 100% da largura da janela do navegador. */
-    padding: 2rem 9%; /* Define o preenchimento interno do elemento, com 2 unidades de altura de linha no topo e na base, e 9% da largura da janela nos lados esquerdo e direito. */
-    background: transparent; /* Define o fundo do elemento como transparente, o que significa que ele não terá cor de fundo visível. */
-    display: flex; /* Define o elemento como um contêiner flexível, permitindo a manipulação de seus elementos filhos. */
-    justify-content: space-between; /* Alinha os elementos filhos horizontalmente com espaço entre eles. */
-    align-items: center; /* Alinha os elementos filhos verticalmente ao centro. */
-    z-index: 100; /* Define a ordem de empilhamento do elemento, tornando-o visível acima de outros elementos que não tenham uma z-index definida. */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 2rem 9%; 
+    background: transparent; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    z-index: 100; 
     transition: .3s;
 }
 
+/* Estilos para o cabeçalho (header) quando está fixo (sticky) */
 .header.sticky {
     background: var(--bg-color);
 }
 
-
+/* Estilos para o logotipo (logo) */
 .logo {
     position: relative;
     font-size: 2.5rem; 
@@ -61,26 +63,26 @@ body {
     font-weight: 600; 
 }
 
+/* Estilos para a barra de navegação */
 .navbar {
     position: relative;
 }
 
+/* Estilos para os links na barra de navegação */
 .navbar a {
-    font-size: 1.7rem; /* Define o tamanho da fonte como 1.7 vezes o tamanho padrão. */
-    color: var(--text-color); /* Define a cor do texto usando a variável '--text-color' que foi definida anteriormente no bloco :root. Isso significa que o texto será na cor cinza claro #ededed. */
-    font-weight: 500; /* Define o peso da fonte como 500, que é um peso médio. */
-    margin-left: 3.5rem; /* Adiciona uma margem à esquerda de 3.5 unidades de largura de linha. */
-    transition: .3s; /* Adiciona uma transição de 0.3 segundos para animar mudanças de estilo. */
+    font-size: 1.7rem; 
+    color: var(--text-color); 
+    font-weight: 500; 
+    margin-left: 3.5rem; 
+    transition: .3s; 
 }
 
-
+/* Estilos para os links quando hover ou ativo */
 .navbar a:hover, .navbar a.active {
-    color: var(--main-color); /* Define a cor do texto como a variável '--main-color' que foi definida anteriormente no bloco :root. Isso significa que a cor será o tom de azul mais brilhante #00abf0. */
+    color: var(--main-color); 
 }
 
-
-
-
+/* Estilos para o ícone do menu */
 #menu-icon {
     position: relative;
     font-size: 3.6rem;
@@ -89,29 +91,29 @@ body {
     display: none; 
 }
 
-
+/* Estilos para as seções (sections) */
 section {
-    min-height: 100vh; /* Define a altura mínima da seção como 100% da altura da viewport (tela do navegador), garantindo que a seção tenha pelo menos a altura da tela, mesmo que seu conteúdo seja menor. */
-    padding: 10rem 9% 2rem; /* Define o preenchimento interno da seção com 10 unidades de altura de linha no topo, 2 unidades de altura de linha na parte inferior e 9% da largura da janela nos lados esquerdo e direito. */
+    min-height: 100vh; 
+    padding: 10rem 9% 2rem; 
 }
 
-
+/* Estilos para a seção "home" */
 .home {
-    display: flex; /* Define o elemento como um contêiner flexível, permitindo a manipulação de seus elementos filhos. */
-    align-items: center; /* Alinha os elementos filhos verticalmente ao centro. */
-    padding: 0 9%; /* Define o preenchimento interno do elemento, com nenhum preenchimento na parte superior e inferior, e 9% da largura da janela nos lados esquerdo e direito. */
-    background: url(/images/teste12.png) no-repeat; /* Define uma imagem de fundo usando o caminho '/images/teste12.png' e especifica que ela não será repetida. */
-    background-size: cover; /* Faz com que a imagem de fundo cubra completamente o elemento. */
-    background-position: center; /* Define a posição da imagem de fundo como o centro do elemento. */
+    display: flex; 
+    align-items: center; 
+    padding: 0 9%; 
+    background: url(/images/teste12.png) no-repeat; 
+    background-size: cover; 
+    background-position: center; 
 }
 
-
+/* Estilos para o conteúdo dentro da seção "home" */
 .home-content {
-    max-width: 60rem; /* Define a largura máxima do elemento como 60 unidades de largura de linha. */
+    max-width: 60rem; 
     z-index: 99;
 }
 
-
+/* Estilos para o título h1 dentro da seção "home-content" */
 .home-content h1 {
     position: relative;
     display: inline-block;
@@ -120,17 +122,18 @@ section {
     line-height: 1.3; 
 }
 
+/* Estilos para o span dentro do h1 dentro da seção "home-content" */
 .home-content h1 span {
     color: var(--text-color);
 }
 
-
+/* Estilos para o elemento com classe "text-animate" dentro da seção "home-content" */
 .home-content .text-animate {
-    position: relative; /* Define a posição do elemento como relativa em relação ao seu elemento pai. */
-    width: 32.8rem; /* Define a largura do elemento como 32.8 unidades de largura de linha. */
+    position: relative; 
+    width: 32.8rem; 
 }
 
-
+/* Estilos para o h3 dentro do elemento com classe "text-animate" dentro da seção "home-content" */
 .home-content .text-animate h3 {
     font-size: 3.2rem; 
     font-weight: 700; 
@@ -143,11 +146,13 @@ section {
    
 }
 
+/* Animação para o h3 dentro do elemento com classe "text-animate" dentro da seção "home-content" quando a classe "show-animate" é aplicada à seção "home" */
 .home.show-animate .home-content .text-animate h3 {
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 }
 
+/* Pseudo-elemento ::before para o h3 dentro do elemento com classe "text-animate" dentro da seção "home-content" */
 .home-content .text-animate h3::before {
     content: '';
     position: absolute;
@@ -159,155 +164,167 @@ section {
     z-index: -1;
 }
 
+/* Animação para o pseudo-elemento ::before do h3 dentro do elemento com classe "text-animate" dentro da seção "home-content" quando a classe "show-animate" é aplicada à seção "home" */
 .home.show-animate .home-content .text-animate h3::before {
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 }
 
+/* Estilos para o parágrafo (p) dentro da seção "home-content" */
 .home-content p {
     position: relative;
     font-size: 1.6rem; 
     margin: 2rem 0 4rem; 
 }
 
+/* Estilos para o contêiner dos botões (btn-box) */
 .btn-box {
-    position: relative; /* Define a posição do elemento como relativa em relação ao seu elemento pai. */
-    display: flex; /* Define o elemento como um contêiner flexível, permitindo a manipulação de seus elementos filhos. */
-    justify-content: space-between; /* Distribui o espaço disponível entre os elementos filhos, criando um espaçamento uniforme entre eles. */
-    width: 34.5rem; /* Define a largura do elemento como 34.5 unidades de largura de linha. */
-    height: 5rem; /* Define a altura do elemento como 5 unidades de altura de linha. */
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    width: 34.5rem; 
+    height: 5rem; 
 }
 
-
+/* Estilos para os botões dentro do contêiner de botões */
 .btn-box .btn {
-    position: relative; /* Define a posição do elemento como relativa em relação ao seu elemento pai. */
-    display: inline-flex; /* Define o elemento como um contêiner flexível em linha. */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
-    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
-    width: 15rem; /* Define a largura do elemento como 15 unidades de largura de linha. */
-    height: 100%; /* Define a altura do elemento como 100% da altura do elemento pai. */
-    background: var(--main-color); /* Define o plano de fundo usando uma variável CSS customizada. */
-    border: .2rem solid var(--main-color); /* Define uma borda de 0.2 unidades de largura e cor igual ao plano de fundo. */
-    border-radius: .8rem; /* Define o raio de borda para 0.8 unidades. */
-    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes o tamanho padrão. */
-    font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito). */
-    letter-spacing: .1rem; /* Define o espaçamento entre caracteres como 0.1 unidades de largura de linha. */
-    color: var(--bg-color); /* Define a cor do texto usando uma variável CSS customizada. */
-    z-index: 1; /* Define a posição na pilha de sobreposição de elementos. */
-    overflow: hidden; /* Define o comportamento de overflow do conteúdo. */
-    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+    position: relative; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 15rem; 
+    height: 100%; 
+    background: var(--main-color); 
+    border: .2rem solid var(--main-color); 
+    border-radius: .8rem; 
+    font-size: 1.8rem; 
+    font-weight: 600; 
+    letter-spacing: .1rem; 
+    color: var(--bg-color); 
+    z-index: 1; 
+    overflow: hidden; 
+    transition: .5s; 
 }
 
- 
-
+ /* Estilos para os botões quando hover */
 .btn-box .btn:hover {
-    color: var(--main-color); /* Ao passar o mouse sobre o botão, altera a cor do texto para a cor principal. */
+    color: var(--main-color); 
 }
 
+/* Estilos para o segundo botão dentro do contêiner de botões */
 .btn-box .btn:nth-child(2) {
-    background: transparent; /* Para o segundo botão, define o plano de fundo como transparente. */
-    color: var(--main-color); /* Para o segundo botão, define a cor do texto como a cor principal. */
+    background: transparent; 
+    color: var(--main-color); 
 }
 
+/* Estilos para o segundo botão dentro do contêiner de botões */
 .btn-box .btn:nth-child(2):hover {
-    color: var(--bg-color); /* Ao passar o mouse sobre o segundo botão, altera a cor do texto para a cor de fundo. */
+    color: var(--bg-color); 
 }
 
+/* Estilos para o segundo botão quando hover */
 .btn-box .btn:nth-child(2)::before {
-    background: var(--main-color); /* Adiciona um elemento pseudo antes do segundo botão com o plano de fundo na cor principal. */
+    background: var(--main-color); 
 }
 
-
+/* Pseudo-elemento ::before para os botões dentro do contêiner de botões */
 .btn-box .btn::before {
-    content: ''; /* Adiciona um conteúdo vazio antes do botão. */
-    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
-    top: 0; /* Alinha o topo do elemento ao topo do elemento pai. */
-    left: 0; /* Alinha a esquerda do elemento à esquerda do elemento pai. */
-    width: 0; /* Define a largura inicial como 0. */
-    height: 100%; /* Define a altura como 100% da altura do elemento pai. */
-    background: var(--bg-color); /* Define o plano de fundo usando uma variável CSS customizada. */
-    z-index: -1; /* Define a posição na pilha de sobreposição de elementos para estar atrás do botão. */
-    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 0; 
+    height: 100%; 
+    background: var(--bg-color); 
+    z-index: -1;
+    transition: .5s; 
 }
 
+/* Estilos para o pseudo-elemento ::before dos botões quando hover */
 .btn-box .btn:hover::before {
-    width: 100%; /* Ao passar o mouse sobre o botão, aumenta a largura do elemento antes do botão para 100%. */
+    width: 100%; 
 }
 
+/* Estilos para a seção "home-sci" */
 .home-sci {
-    position:absolute; /* Define a posição como absoluta em relação ao elemento pai. */
-    bottom: 4rem; /* Define uma distância de 4 unidades a partir da borda inferior do elemento pai. */
-    width: 170px; /* Define a largura como 170 pixels. */
-    display: flex; /* Define o elemento como um contêiner flexível. */
-    justify-content: space-between; /* Distribui o espaço disponível entre os elementos filhos. */
+    position:absolute;
+    bottom: 4rem; 
+    width: 170px; 
+    display: flex; 
+    justify-content: space-between; 
 }
 
-
+/* Estilos para os links dentro da seção "home-sci" */
 .home-sci a {
-    position: relative; /* Define a posição como relativa em relação ao seu elemento pai. */
-    display: inline-flex; /* Define o elemento como um contêiner flexível em linha. */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
-    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
-    width: 40px; /* Define a largura do elemento como 40 pixels. */
-    height: 40px; /* Define a altura do elemento como 40 pixels. */
-    background: transparent; /* Define o plano de fundo como transparente. */
-    border: .2rem solid var(--main-color); /* Define uma borda de 0.2 unidades de largura e cor igual à cor principal. */
-    border-radius: 50%; /* Define o raio de borda como 50%, criando um círculo. */
-    font-size: 20px; /* Define o tamanho da fonte como 20 pixels. */
-    color: var(--main-color); /* Define a cor do texto usando uma variável CSS customizada. */
-    z-index: 1; /* Define a posição na pilha de sobreposição de elementos. */
-    overflow: hidden; /* Define o comportamento de overflow do conteúdo. */
-    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+    position: relative; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; 
+    height: 40px; 
+    background: transparent; 
+    border: .2rem solid var(--main-color); 
+    border-radius: 50%; 
+    font-size: 20px; 
+    color: var(--main-color); 
+    z-index: 1; 
+    overflow: hidden; 
+    transition: .5s; 
 }
 
+/* Estilos para os links quando hover */
 .home-sci a:hover {
-    color: var(--bg-color); /* Ao passar o mouse sobre o link, altera a cor do texto para a cor de fundo. */
+    color: var(--bg-color); 
 }
 
+/* Pseudo-elemento ::before para os links dentro da seção "home-sci" */
 .home-sci a::before {
-    content: ''; /* Adiciona um conteúdo vazio antes do link. */
-    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
-    top: 0; /* Alinha o topo do elemento ao topo do elemento pai. */
-    left: 0; /* Alinha a esquerda do elemento à esquerda do elemento pai. */
-    width: 0%; /* Define a largura inicial como 0%. */
-    height: 100%; /* Define a altura como 100% da altura do elemento pai. */
-    background: var(--main-color); /* Define o plano de fundo usando uma variável CSS customizada. */
-    z-index: -1; /* Define a posição na pilha de sobreposição de elementos para estar atrás do link. */
-    transition: .5s; /* Adiciona uma transição de 0.5 segundos para animações suaves. */
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 0%; 
+    height: 100%; 
+    background: var(--main-color);
+    z-index: -1; 
+    transition: .5s; 
 }
 
-
+/* Estilos para o pseudo-elemento ::before dos links quando hover */
 .home-sci a:hover::before { 
-    width: 100%; /* Ao passar o mouse sobre o link, expande a largura do elemento antes do link para 100%. */
+    width: 100%; 
 }
 
+/* Estilos para a seção "home-imgHover" */
 .home-imgHover {
-    position: absolute; /* Define a posição como absoluta em relação ao elemento pai. */
-    top: 0; /* Alinha o topo do elemento ao topo do elemento pai. */
-    right: 0; /* Alinha a direita do elemento à direita do elemento pai. */
-    width: 48%; /* Define a largura do elemento como 48% do elemento pai. */
-    height: 100%; /* Define a altura do elemento como 100% da altura do elemento pai. */
-    background: transparent; /* Define o plano de fundo como transparente. */
-    border: transparent; /* Define a borda como transparente. */
-    transition: 3s; /* Adiciona uma transição de 3 segundos para animações suaves. */
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 48%; 
+    height: 100%; 
+    background: transparent; 
+    border: transparent; 
+    transition: 3s; 
 }
 
+/* Estilos para a seção "home-imgHover" quando hover */
 .home-imgHover:hover {
-    background: #081b29; /* Ao passar o mouse sobre o elemento, altera o plano de fundo para a cor #081b29. */
-    opacity: .8; /* Define a opacidade do elemento como 80%. */
+    background: #081b29; 
+    opacity: .8; 
 }
 
+/* Estilos para a seção "about" */
 .about {
-    display: flex; /* Define o elemento como um contêiner flexível. */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento. */
-    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento. */
-    flex-direction: column; /* Define a direção do layout como coluna. */
-    gap: 2rem; /* Define o espaçamento entre os elementos como 2 unidades. */
-    background: var(--second-bg-color); /* Define o plano de fundo usando uma variável CSS customizada. */
-    padding-bottom: 6rem; /* Adiciona um preenchimento na parte inferior de 6 unidades. */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    gap: 2rem; 
+    background: var(--second-bg-color); 
+    padding-bottom: 6rem; 
 }
 
-
+/* Estilos para o cabeçalho dentro da seção "about" */
 .heading {
     position: relative;
     font-size: 5rem;
